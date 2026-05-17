@@ -25,29 +25,28 @@ public class PracticeFormTest {
     @Test
     void positiveMaxFormTest() {
         open("/automation-practice-form"); //Добавление в URL path-параметра для открытия нужной страницы
-//        executeJavaScript("$('#fixedban').remove()"); //Убираем банеры
-//        executeJavaScript("$('footer').remove()"); //Убираем футер
-        $("#firstName").setValue(firstName);
-        $("#lastName").setValue(lastName);
-        $("#userEmail").setValue(eMail);
-        $("#genterWrapper").$(byText(gender)).click();
-        $("#userNumber").setValue(phoneNumber);
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__year-select").$(byText(year)).click();
-        $(".react-datepicker__month-select").$(byText(month)).click();
-        $(".react-datepicker__day--0" + day).click();
-        $("#subjectsInput").setValue(subjectPattern);
-        $(".subjects-auto-complete__option").scrollTo();
-        $(".subjects-auto-complete__menu-list").$(byText(subjectName)).click();
-        $("#hobbiesWrapper").$(byText(hobby1)).click();
-        $("#hobbiesWrapper").$(byText(hobby2)).click();
-        $("#uploadPicture").uploadFromClasspath(studentPhoto);
-        $("#currentAddress-wrapper .form-control").setValue(studentAddress);
-        $("#react-select-3-input").click();
-        $(".css-1nmdiq5-menu").$(byText(state)).click();
-        $("#react-select-4-input").click();
-        $(".css-1nmdiq5-menu").$(byText(city)).click();
-        $("#submit").click();
+
+        element("#firstName").setValue(firstName);
+        element("#lastName").setValue(lastName);
+        element("#userEmail").setValue(eMail);
+        element("#genterWrapper").$(byText(gender)).click();
+        element("#userNumber").setValue(phoneNumber);
+        element("#dateOfBirthInput").click();
+        element(".react-datepicker__year-select").$(byText(year)).click();
+        element(".react-datepicker__month-select").$(byText(month)).click();
+        element(".react-datepicker__day--0" + day).click();
+        element("#subjectsInput").setValue(subjectPattern);
+        element(".subjects-auto-complete__option").scrollTo();
+        element(".subjects-auto-complete__menu-list").$(byText(subjectName)).click();
+        element("#hobbiesWrapper").$(byText(hobby1)).click();
+        element("#hobbiesWrapper").$(byText(hobby2)).click();
+        element("#uploadPicture").uploadFromClasspath(studentPhoto);
+        element("#currentAddress-wrapper .form-control").setValue(studentAddress);
+        element("#react-select-3-input").click();
+        element(".css-1nmdiq5-menu").$(byText(state)).click();
+        element("#react-select-4-input").click();
+        element(".css-1nmdiq5-menu").$(byText(city)).click();
+        element("#submit").click();
 
         //Проверка заполения таблицы
         element(".table-responsive").$(byText("Student Name")).parent().shouldHave(text(expectedName));
