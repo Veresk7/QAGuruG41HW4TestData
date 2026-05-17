@@ -33,9 +33,9 @@ public class PracticeFormTest {
         $("#genterWrapper").$(byText(gender)).click();
         $("#userNumber").setValue(phoneNumber);
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__year-select").$(byText(birthYear)).click();
-        $(".react-datepicker__month-select").$(byText(birthMonth)).click();
-        $(".react-datepicker__day--005").click();
+        $(".react-datepicker__year-select").$(byText(year)).click();
+        $(".react-datepicker__month-select").$(byText(month)).click();
+        $(".react-datepicker__day--0" + day).click();
         $("#subjectsInput").setValue(subjectPattern);
         $(".subjects-auto-complete__option").scrollTo();
         $(".subjects-auto-complete__menu-list").$(byText(subjectName)).click();

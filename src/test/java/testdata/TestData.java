@@ -9,8 +9,9 @@ public class TestData {
     public static String gender = "Male";
     public static String subjectPattern = "hi";
     public static String subjectName = "Hindi";
-    public static String birthYear = "2070";
-    public static String birthMonth = "September";
+    public static String day = "05";
+    public static String year = "2070";
+    public static String month = "September";
     public static String hobby1 = "Sports";
     public static String hobby2 = "Reading";
     public static String studentPhoto = "example_image_hw4.jpg";
@@ -22,6 +23,6 @@ public class TestData {
     public static String expectedName = (firstName + " " + lastName);
     public static String expectedHobby = (hobby1 + ", " + hobby2);
     public static String expectedStateCity = (state + " " + city);
-    public static String expectedBirthDate = ("05 " + birthMonth + "," + birthYear);
+    public static String expectedBirthDate = (day +" " + month + "," + year);
 
 }
